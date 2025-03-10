@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Servidor Disciplina RP de MTA:SA - Un lugar donde la disciplina y el rol se encuentran.">
-    <title>Disciplina RP - </title>
+    <title>Disciplina RP</title>
     <!-- Fuentes de Google -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Oswald:wght@400;700&display=swap" rel="stylesheet">
     <!-- Estilos CSS -->
@@ -140,40 +140,78 @@
             box-shadow: 0 0 15px rgba(0, 179, 255, 0.7);
         }
 
-        /* Información */
-        .info-section {
+        /* SECCIÓN DE CONCEPTOS */
+        .conceptos-section {
             display: flex;
-            justify-content: space-around;
             flex-wrap: wrap;
+            justify-content: space-around;
             margin: 50px 20px;
-            position: relative;
         }
 
-        .info-card {
+        .conceptos-card {
             background-color: rgba(0, 0, 0, 0.8);
             border-radius: 15px;
             padding: 30px;
-            width: 30%;
+            width: 45%;
             margin-bottom: 20px;
-            text-align: center;
+            text-align: left;
             box-shadow: 0 0 20px rgba(0, 179, 255, 0.3);
             backdrop-filter: blur(10px);
             transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .info-card:hover {
+        .conceptos-card:hover {
             transform: scale(1.05);
             box-shadow: 0 0 30px rgba(0, 179, 255, 0.7);
         }
 
-        .info-card h3 {
-            font-size: 2em;
+        .conceptos-card h3 {
+            font-size: 1.6em;
             margin-bottom: 15px;
             color: #00b3ff;
         }
 
-        .info-card p {
-            font-size: 1.2em;
+        .conceptos-card p {
+            font-size: 1.1em;
+            color: #bbb;
+        }
+
+        /* NUEVA SECCIÓN DE REGLAS */
+        .reglas-section {
+            margin: 50px 20px;
+            text-align: center;
+        }
+
+        .reglas-section h2 {
+            font-size: 2.5em;
+            color: #00b3ff;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+        }
+
+        .reglas-card {
+            background-color: rgba(0, 0, 0, 0.8);
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 20px;
+            box-shadow: 0 0 20px rgba(0, 179, 255, 0.3);
+            backdrop-filter: blur(10px);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .reglas-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 0 30px rgba(0, 179, 255, 0.7);
+        }
+
+        .reglas-card h3 {
+            font-size: 1.6em;
+            margin-bottom: 15px;
+            color: #00b3ff;
+        }
+
+        .reglas-card p {
+            font-size: 1.1em;
             color: #bbb;
         }
 
@@ -196,68 +234,12 @@
             text-decoration: underline;
         }
 
-        /* NUEVA SECCIÓN DE CONCEPTOS DE ROLEPLAY */
-        #roleplay-concepts {
-            background-color: #1a1a1a;
-            padding: 50px 20px;
-            margin-top: 50px;
-        }
-
-        #roleplay-concepts h2 {
-            text-align: center;
-            font-size: 2.5em;
-            color: #00b3ff;
-            margin-bottom: 30px;
-        }
-
-        .concept-card {
-            background-color: rgba(0, 0, 0, 0.8);
-            border-radius: 10px;
-            padding: 20px;
-            margin-bottom: 30px;
-            box-shadow: 0 0 20px rgba(0, 179, 255, 0.3);
-            backdrop-filter: blur(10px);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .concept-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 0 30px rgba(0, 179, 255, 0.7);
-        }
-
-        .concept-card h3 {
-            font-size: 2em;
-            color: #00b3ff;
-            margin-bottom: 10px;
-        }
-
-        .concept-card p {
-            font-size: 1.1em;
-            color: #bbb;
-        }
-
-        /* Estrellas debajo de los botones */
-        .star-container {
-            position: relative;
-            margin-top: 40px;
-        }
-
-        .star-container .starry-background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-        }
     </style>
 </head>
 <body>
 
     <!-- FONDO ESTRELLADO -->
-    <div class="starry-background">
-        <!-- JavaScript generará estrellas aquí -->
-    </div>
+    <div class="starry-background"></div>
 
     <!-- HEADER -->
     <header>
@@ -265,232 +247,269 @@
         <nav>
             <a href="#home">Inicio</a>
             <a href="#roleplay-concepts">Conceptos</a>
+            <a href="#reglas">Reglas</a> <!-- Enlace a la nueva sección de reglas -->
         </nav>
     </header>
 
     <!-- HERO SECTION -->
     <section class="hero">
         <h2>Bienvenido a Disciplina RP</h2>
-        <a href="https://discord.gg/zD8EZf7yqe" class="cta-btn" target="_blank">¡Únete a nuestro Discord!</a>
+        <a href="#roleplay-concepts" class="cta-btn">¡Comienza a jugar ahora!</a>
     </section>
 
-    <!-- CONCEPTOS DE ROLEPLAY -->
-    <section id="roleplay-concepts">
-        <h2>Conceptos de Roleplay</h2>
-        <div class="concept-card">
-            <h3>IC (In Character)</h3>
-            <p>Es el medio de información accesible que tiene tu PERSONAJE.</p>
-        </div>
-        <div class="concept-card">
-            <h3>OOC (Out of Character)</h3>
-            <p>Es el medio de información accesible del JUGADOR.</p>
-        </div>
-        <div class="concept-card">
-            <h3>IOOC (Insulter OutOf Character)</h3>
-            <p>Es insultar a otra persona en el canal OOC, puedes ser jaileado por esto.</p>
-        </div>
-        <div class="concept-card">
-            <h3>ER (Evadir Rol)</h3>
-            <p>Es desconectarse, forzar crash o usar el /morir para evadir un rol que te estén haciendo.</p>
-        </div>
-        <div class="concept-card">
-            <h3>EK (Evadir Kill)</h3>
-            <p>Es desconectarse o usar un comando para evadir que tu personaje termine abatido.</p>
-        </div>
-        <div class="concept-card">
-            <h3>DM (Death Match)</h3>
-            <p>Es pegar/asesinar sin razón a alguien, ya sea con un arma o con los puños.</p>
-        </div>
-        <div class="concept-card">
-            <h3>NVVPJ (No Valorar La Vida de tu Personaje)</h3>
-            <p>Hacer cualquier cosa arriesgando la vida de tu personaje.</p>
-        </div>
-        <div class="concept-card">
-            <h3>PG (Power Gaming)</h3>
-            <p>Realizar acciones que serían imposibles en la vida real, o que nunca harías.</p>
-        </div>
-        <div class="concept-card">
-            <h3>PG2</h3>
-            <p>Forzar rol a beneficio tuyo, por ejemplo: Mentirle a un usuario lo que llevas encima para salvarte.</p>
-        </div>
-        <div class="concept-card">
-            <h3>MG (Meta Gaming)</h3>
-            <p>Usar información OOC para beneficio IC o viceversa.</p>
-        </div>
-        <div class="concept-card">
-            <h3>CC (Confundir Canales)</h3>
-            <p>Confundir los canales IC con OOC.</p>
-        </div>
-        <div class="concept-card">
-            <h3>CJ (Car Jacked)</h3>
-            <p>Es el robo a vehículos sin rol.</p>
-        </div>
-        <div class="concept-card">
-            <h3>RK (Revenge Kill)</h3>
-            <p>Es ir a asesinar a alguien que te mató previamente en un rol.</p>
-        </div>
-        <div class="concept-card">
-            <h3>CK (Car Kill)</h3>
-            <p>Matar a un usuario atropellándolo con un vehículo.</p>
-        </div>
-        <div class="concept-card">
-            <h3>TK (Team Kill)</h3>
-            <p>Es asesinar a miembros de tu propia facción.</p>
-        </div>
-        <div class="concept-card">
-            <h3>BD (Bad Driving)</h3>
-            <p>Manejar de forma imprudente o fuera de las normas.</p>
-        </div>
-        <div class="concept-card">
-            <h3>ZZ (Zig Zag)</h3>
-            <p>Realizar movimientos irregulares para evitar las balas.</p>
-        </div>
-        <div class="concept-card">
-            <h3>HQ (Head Quarters)</h3>
-            <p>Es la base de una facción.</p>
-        </div>
-        <div class="concept-card">
-            <h3>IHQ (Invasion Head Quarters)</h3>
-            <p>Invadir una facción enemiga con menos de 4/5 usuarios.</p>
-        </div>
-        <div class="concept-card">
-            <h3>SK (Spawn Kill)</h3>
-            <p>Es asesinar a un usuario al entrar o salir de un lugar.</p>
-        </div>
-        <div class="concept-card">
-            <h3>HK (Helicopter Kill)</h3>
-            <p>Es matar a alguien usando las hélices del helicóptero.</p>
-        </div>
-        <div class="concept-card">
-            <h3>BA (Bug Abuser)</h3>
-            <p>Abusar de un bug para beneficio propio.</p>
-        </div>
-        <div class="concept-card">
-            <h3>NA (Noob Abuser)</h3>
-            <p>Abusar de jugadores nuevos que están protegidos por un tiempo.</p>
-        </div>
-        <div class="concept-card">
-            <h3>AA (Admin Abuser)</h3>
-            <p>Abusar de un rango superior para beneficios propios.</p>
-        </div>
-        <div class="concept-card">
-            <h3>BJ/BH (Bunny Hop/Bunny Jump)</h3>
-            <p>Saltar repetidamente para llegar más rápido.</p>
-        </div>
-        <div class="concept-card">
-            <h3>DB (Drive-By)</h3>
-            <p>Disparar desde el asiento del conductor de un vehículo.</p>
-        </div>
-        <div class="concept-card">
-            <h3>BPC (Bad Parking Car)</h3>
-            <p>Estacionar de forma antiroleplay.</p>
-        </div>
-        <div class="concept-card">
-            <h3>AIOOC (Admin Insult Out Of Character)</h3>
-            <p>Insultar a un admin por el canal OOC.</p>
-        </div>
-        <div class="concept-card">
-            <h3>LA (Lag Abuser)</h3>
-            <p>Abusar del lag del servidor o de un jugador.</p>
-        </div>
-        <div class="concept-card">
-            <h3>LA2 (FA - Faction Abuser)</h3>
-            <p>Abusar de tu rango siendo líder de facción.</p>
-        </div>
-        <div class="concept-card">
-            <h3>MK (Meta Kill)</h3>
-            <p>Asesinar a alguien por motivos OOC.</p>
-        </div>
-        <div class="concept-card">
-            <h3>MA (Mal Anuncio IC)</h3>
-            <p>Realizar un anuncio mal en IC.</p>
-        </div>
-        <div class="concept-card">
-            <h3>MUD (Mal Uso del Canal /DUDA)</h3>
-            <p>Realizar preguntas fuera de rol.</p>
-        </div>
-        <div class="concept-card">
-            <h3>MUR (Mal Uso del /reportar)</h3>
-            <p>Pedir cosas que puedes obtener IC fácilmente.</p>
-        </div>
-        <div class="concept-card">
-            <h3>SPAM</h3>
-            <p>Promocionar otro servidor o enviar mensajes repetitivos.</p>
-        </div>
-        <div class="concept-card">
-            <h3>FLOOD</h3>
-            <p>Repetir el mismo mensaje varias veces.</p>
-        </div>
-        <div class="concept-card">
-            <h3>AFK (Away from Keyboard)</h3>
-            <p>Estar fuera del teclado.</p>
-        </div>
-        <div class="concept-card">
-            <h3>AVP (Afk en Vía Pública)</h3>
-            <p>Estar AFK en un lugar público.</p>
-        </div>
-        <div class="concept-card">
-            <h3>NRA (No Rolear Arma)</h3>
-            <p>No rolear el uso de un arma (recargar, sacar, guardar, etc).</p>
-        </div>
-        <div class="concept-card">
-            <h3>NRE (No Rolear Entorno)</h3>
-            <p>No rolear el entorno donde estás.</p>
-        </div>
-        <div class="concept-card">
-            <h3>NRH (No Rolear Heridas)</h3>
-            <p>No rolear las heridas después de ser atacado.</p>
-        </div>
-        <div class="concept-card">
-            <h3>NRC (No Rolear Choque)</h3>
-            <p>No hacer rol después de chocar un vehículo.</p>
-        </div>
-        <div class="concept-card">
-            <h3>NIP (Nula Interpretación del Personaje)</h3>
-            <p>No interpretar correctamente el rol.</p>
-        </div>
-        <div class="concept-card">
-            <h3>PK (Player Kill)</h3>
-            <p>Aplicar un PK significa que el personaje muere involuntariamente.</p>
-        </div>
-        <div class="concept-card">
-            <h3>CK (Character Kill)</h3>
-            <p>Es la muerte definitiva del personaje con el consiguiente ban.</p>
-        </div>
+    <!-- SECCIÓN DE CONCEPTOS -->
+    <section id="roleplay-concepts" class="conceptos-section">
+<div class="conceptos-card">
+    <h3>IC (In Character)</h3>
+    <p>Es el medio de información accesible que tiene tu PERSONAJE.</p>
+</div>
+<div class="conceptos-card">
+    <h3>OOC (Out of Character)</h3>
+    <p>Es el medio de información accesible del JUGADOR.</p>
+</div>
+<div class="conceptos-card">
+    <h3>IOOC (Insulter OutOf Character)</h3>
+    <p>Es insultar a otra persona en el canal OOC, puedes ser jaileado por esto.</p>
+</div>
+<div class="conceptos-card">
+    <h3>ER (Evadir Rol)</h3>
+    <p>Es desconectarse, forzar crash o usar el /morir (existen más formas) para evadir un rol que te estén haciendo.</p>
+</div>
+<div class="conceptos-card">
+    <h3>EK (Evadir Kill)</h3>
+    <p>Es desconectarse o usar un comando que te beneficie tpeandote (ejemplo de facciones legales; SAFA: /castigar [ID] [Tiempo]) para evadir que tu PJ termine abatido.</p>
+</div>
+<div class="conceptos-card">
+    <h3>DM (Death Match)</h3>
+    <p>Es pegar/asesinar sin razón a alguien, ya sea con un arma o con los puños.</p>
+</div>
+<div class="conceptos-card">
+    <h3>NVVPJ (No Valorar La Vida de tu Personaje)</h3>
+    <p>Hacer cualquier cosa arriesgando la vida de tu PJ. Ejemplo: Meterte en medio de un tiroteo sin armas.</p>
+</div>
+<div class="conceptos-card">
+    <h3>PG (Power Gaming)</h3>
+    <p>Realizar acciones que serían imposibles en la vida real, o que nunca harías.</p>
+</div>
+<div class="conceptos-card">
+    <h3>PG2</h3>
+    <p>Es forzar rol, haciendo el rol a beneficio tuyo. Un ejemplo: Mentirle a un usuario lo que llevas encima para salvar X cosa, cuando este te está realizando un rol de revisión.</p>
+</div>
+<div class="conceptos-card">
+    <h3>MG (Meta Gaming)</h3>
+    <p>Es utilizar información OOC para beneficio IC o viceversa.</p>
+</div>
+<div class="conceptos-card">
+    <h3>CC (Confundir Canales)</h3>
+    <p>Es la confusión de canales IC con OOC.</p>
+</div>
+<div class="conceptos-card">
+    <h3>CJ (Car Jacked)</h3>
+    <p>Es el robo a vehículos sin rol (prácticamente apretando la F/ENTER).</p>
+</div>
+<div class="conceptos-card">
+    <h3>RK (Revenge Kill)</h3>
+    <p>Es ir a asesinar/dañar al que te asesinó después de haber muerto en un rol.</p>
+</div>
+<div class="conceptos-card">
+    <h3>CK (Car Kill)</h3>
+    <p>Matar/Atropellar Con Un Auto a un usuario del servidor.</p>
+</div>
+<div class="conceptos-card">
+    <h3>TK (Team Kill)</h3>
+    <p>Es asesinar a miembros de tu facción/Banda.</p>
+</div>
+<div class="conceptos-card">
+    <h3>BD (Bad Driving)</h3>
+    <p>Manejar Mal, Por el Carril Contrario o por la acera.</p>
+</div>
+<div class="conceptos-card">
+    <h3>ZZ (Zig Zag)</h3>
+    <p>Hacer zig zag de forma que no te peguen las balas.</p>
+</div>
+<div class="conceptos-card">
+    <h3>HQ (Head Quarters)</h3>
+    <p>Es la Base De Una Facción.</p>
+</div>
+<div class="conceptos-card">
+    <h3>IHQ (Invasion Head Quarters)</h3>
+    <p>Invadir facción enemiga con menos de 4/5 (depende del servidor) usuarios.</p>
+</div>
+<div class="conceptos-card">
+    <h3>SK (Spawn Kill)</h3>
+    <p>Es asesinar a un usuario que entra a un lugar/sale, generalmente, cuando alguien entra o sale de algún lugar tiene que esperar 5 segundos para que se le descongele la pantalla.</p>
+</div>
+<div class="conceptos-card">
+    <h3>HK (Helicopter Kill)</h3>
+    <p>Es matar con las hélices del helicóptero.</p>
+</div>
+<div class="conceptos-card">
+    <h3>BA (Bug Abuser)</h3>
+    <p>Es cuando abusas de un bug ocurrido para tu propio beneficio.</p>
+</div>
+<div class="conceptos-card">
+    <h3>NA (Noob Abuser)</h3>
+    <p>Abusar de un jugador que es nuevo en el servidor, ya que el usuario nuevo está protegido al menos 2 o 3hs (Esto depende del servidor).</p>
+</div>
+<div class="conceptos-card">
+    <h3>AA (Admin Abuser)</h3>
+    <p>Es cuando un rango superior abusa de su superioridad ya sea con comandos, beneficios, etc.</p>
+</div>
+<div class="conceptos-card">
+    <h3>BJ/BH (Bunny Hop/Bunny jump)</h3>
+    <p>Saltar repetidas veces para llegar más rápido a un lugar.</p>
+</div>
+<div class="conceptos-card">
+    <h3>BH2/BBH (Bike Bunny Hop)</h3>
+    <p>Saltar repetidas veces con la bicicleta.</p>
+</div>
+<div class="conceptos-card">
+    <h3>DB (Drive-By)</h3>
+    <p>Es cuando disparas con armas desde el asiento de conductor del vehículo.</p>
+</div>
+<div class="conceptos-card">
+    <h3>BPC (Bad Parking Car)</h3>
+    <p>Es estacionar de una forma antiroleplay tu vehículo.</p>
+</div>
+<div class="conceptos-card">
+    <h3>AIOOC (Admin Insult Out Of Character)</h3>
+    <p>Insultar a la administración o a algún administrador por el canal de comunicación OOC.</p>
+</div>
+<div class="conceptos-card">
+    <h3>LA (Lag Abuser)</h3>
+    <p>Abusar del lag de un usuario o del servidor. Ejemplo: Ir a un tiroteo con 600 de ping.</p>
+</div>
+<div class="conceptos-card">
+    <h3>LA2/FA (Faction Abuser)</h3>
+    <p>Abusar siendo líder de una facción.</p>
+</div>
+<div class="conceptos-card">
+    <h3>MK (Meta Kill)</h3>
+    <p>Asesinar a alguien IC por motivos OOC.</p>
+</div>
+<div class="conceptos-card">
+    <h3>MA (Mal Anuncio IC)</h3>
+    <p>Mal Anuncio IC.</p>
+</div>
+<div class="conceptos-card">
+    <h3>MUD (Mal Uso del canal /DUDA)</h3>
+    <p>Ejemplo: /duda Nombrar a X usuario pidiéndole su ubicación.</p>
+</div>
+<div class="conceptos-card">
+    <h3>MUR (Mal uso del /reportar)</h3>
+    <p>Ejemplo: Pedir cosas que vía IC puedes conseguir fácilmente.</p>
+</div>
+<div class="conceptos-card">
+    <h3>SPAM</h3>
+    <p>Promocionar otro servidor en un servidor (razón de BAN).</p>
+</div>
+<div class="conceptos-card">
+    <h3>FLOOD</h3>
+    <p>Repetir varias veces un mismo mensaje.</p>
+</div>
+<div class="conceptos-card">
+    <h3>AFK (Away from keyboard)</h3>
+    <p>Estar afuera de tu PC/teclado.</p>
+</div>
+<div class="conceptos-card">
+    <h3>AVP (Afk en Vía Pública)</h3>
+    <p>Estar fuera del juego pero conectado en una zona pública. Ejemplo: Estar AFK en la comisaria.</p>
+</div>
+<div class="conceptos-card">
+    <h3>NRA (No Rolear Arma)</h3>
+    <p>No rolear Recargar/Sacar/Quitar Seguro/Recoger/Tirar un arma.</p>
+</div>
+<div class="conceptos-card">
+    <h3>NRE (No Rolear Entorno)</h3>
+    <p>No rolear el entorno que rodea a tu personaje. Ejemplo: Sacar un arma en La comisaria De Los Santos.</p>
+</div>
+<div class="conceptos-card">
+    <h3>NRH (No Rolear Heridas)</h3>
+    <p>Que te disparen/Peguen/Claven algo y no rolear la herida.</p>
+</div>
+<div class="conceptos-card">
+    <h3>NRC (No Rolear Choque)</h3>
+    <p>No hacer el rol al chocar. Ejemplo: Chocar a 100km/h y seguir de largo.</p>
+</div>
+<div class="conceptos-card">
+    <h3>NIP (Nula Interpretación del personaje)</h3>
+    <p>Como su nombre lo indica, es el nulo rol a la hora de interpretar una acción. Ejemplo: Siendo SAPD/SAFA, colocar un cepo a un vehículo sin rol alguno.</p>
+</div>
+<div class="conceptos-card">
+    <h3>PK (Player Kill)</h3>
+    <p>Se aplica un PK cuando el personaje muere de forma involuntaria (cuando el jugador no tuvo intención de que su personaje muera).</p>
+</div>
+<div class="conceptos-card">
+    <h3>CK2 (Character Kill)</h3>
+    <p>Es la muerte definitiva del personaje + ban de cuenta. Ambos "bandos" deben de estar de acuerdo para hacer este rol.</p>
+</div>
 
-        <!-- Estrellas debajo de los botones -->
-        <div class="star-container">
-            <div class="starry-background">
-                <!-- Estrellas generadas dinámicamente -->
-            </div>
         </div>
+    </section>
 
+    <!-- SECCIÓN DE REGLAS -->
+    <section id="reglas" class="reglas-section">
+        <h2>Reglas del Servidor</h2>
+        <div class="reglas-card">
+            <h3>/Do Y /ME</h3>
+            <p>El ladrón inicia el robo sacando una navaja y amenazando a la víctima para que entregue sus pertenencias. Si la víctima decide cooperar, el ladrón toma los objetos, pero si intenta resistirse, se inicia un enfrentamiento con tiradas de dados. Después, el ladrón huye con el botín. Para evitar el "powergaming" (PG), es necesario que ambos jugadores usen los comandos /me y /do correctamente, permitiendo que la víctima tenga una respuesta, de lo contrario, se impondrán sanciones de 40 comunitarias..</p>
+        </div>
+        <div class="reglas-card">
+            <h3>Robos A Tienda</h3>
+            <p>Normativa para Robos de Tienda en Disciplina RP
+
+Para garantizar un rol equilibrado y respetuoso, se establecen las siguientes reglas para los robos de tiendas:
+
+Cantidad mínima de personas:
+Para realizar un robo en una tienda, se requiere un mínimo de 2 personas. Si un solo jugador intenta robar la tienda, se le aplicará una sanción de 30 CM de castigo.
+
+Esperar la llegada de la policía:
+Después de realizar el robo, deberán esperar al menos 1 minuto para permitir que lleguen las autoridades (policías). Durante este tiempo, se debe negociar o, en su defecto, dar lugar a una persecución por parte de la policía.
+
+Incumplimiento de las reglas:
+Si no se cumple con esta normativa, el jugador recibirá una sanción de 30 CM.
+
+Recuerda: Estas reglas están diseñadas para mantener la coherencia y el respeto dentro del rol. Cualquier intento de eludirlas será sancionado de acuerdo con la normativa establecida en Disciplina RP. </p>
+        </div>
+        <div class="reglas-card">
+            <h3>Zonas Seguras</h3>
+            <p>Zonas Seguras en Disciplina RP
+
+En Disciplina RP, el respeto por las zonas seguras es fundamental para mantener un ambiente de rol equilibrado y respetuoso. Las siguientes áreas están prohibidas para realizar asesinatos. Si se observa a un jugador cometiendo homicidio en cualquiera de estas zonas, se le aplicará una sanción de ban inmediata.
+
+Zonas Seguras:
+
+Tienda de Skins
+Base de Policía
+Taller Mecánicos
+Hospital
+Todos los Garajes
+Estacionamientos
+Todos los Trabajos
+Diler
+Armería
+
+Recuerda: En Disciplina RP, es esencial que todos los jugadores actúen con coherencia y respeten las normas para mantener la calidad y seriedad del rol. Valoramos la inmersión y el comportamiento responsable dentro del juego.</p>
+        </div>
+         <div class="reglas-card">
+            <h3>Valoracion de vida</h3>
+            <p>Recuerda siempre valorar tu vida dentro del rol.
+Si en alguna situación te encuentras con un grupo de gánsteres o individuos armados que te detienen, y decides continuar sin hacer caso a su autoridad, esto será considerado una infracción grave. En la vida real, esta actitud podría tener consecuencias fatales, por lo que en el servidor se aplicará una sanción de 20 CM por no valorar la vida.
+
+Consejo: Si quieres evitar este tipo de sanciones, actúa con coherencia y sigue el rol adecuadamente, siempre considerando las consecuencias de tus acciones dentro del juego.</p>
+        </div>
+         <div class="reglas-card">
+            <h3>Reglas de la comunidad</h3>
+            <p>El respeto es fundamental en este servidor; está prohibido cualquier tipo de discriminación, insultos o violaciones de derechos humanos. Los apodos y avatares deben ser apropiados y no deben contener elementos ofensivos, racistas o que inciten al odio, violencia o extremismo. Además, es estrictamente prohibido solicitar o compartir información personal como edad, dirección o número de teléfono, para evitar situaciones incómodas o peligrosas. El contenido inapropiado, como el NSFW o NSFL, no está permitido y puede llevar a una expulsión inmediata.
+
+Se prohíbe el spam o inundación en los canales para mantener el orden, y también está prohibido divulgar información dentro del servidor, lo que incluye mensajes directos. Las menciones de usuarios o roles no deben hacerse de manera aleatoria para obtener respuestas rápidas. La amabilidad y el respeto son esenciales para una comunidad armoniosa; las preguntas deben ser respondidas con cortesía, ya que lo que parece obvio hoy pudo haber sido una pregunta para otro en el pasado.</p>
+        </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
-        <p>&copy; 2025 Disciplina RP. Todos los derechos reservados. | <a href="https://discord.gg/zD8EZf7yqe" target="_blank">Únete a nuestro Discord</a></p>
+        <p>&copy; 2025 Disciplina RP. Todos los derechos reservados. | <a href="https://discord.gg/ejemplo">|DISCORD|</a></p>
     </footer>
-
-    <script>
-        // JavaScript para generar estrellas en el fondo
-        function createStars() {
-            const starBackground = document.querySelector('.starry-background');
-            const numStars = 200; // Número de estrellas a generar
-
-            for (let i = 0; i < numStars; i++) {
-                const star = document.createElement('div');
-                star.classList.add('star');
-                star.style.left = Math.random() * 100 + '%';  // Posición horizontal
-                star.style.animationDuration = Math.random() * 3 + 1 + 's';  // Duración del parpadeo
-                star.style.animationDelay = Math.random() * 5 + 's';  // Retraso de parpadeo
-                starBackground.appendChild(star);
-            }
-        }
-
-        createStars();
-    </script>
 
 </body>
 </html>
-
